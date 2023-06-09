@@ -1,0 +1,132 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  margin: auto;
+  padding: auto;
+  box-sizing: inherit;
+}
+body {
+  background-color: rgb(194, 66, 90);
+  display: flex;
+}
+img {
+  width: 150px;
+  height: auto;
+}
+main {
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px;
+  margin-top: 60px;
+  width: 80%;
+  height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(198, 82, 104);
+}
+
+/* PLAYER  */
+.player--active {
+  background-color: rgba(221, 205, 191, 0.766);
+  border-radius: 20px 0 0px 20px;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  width: 50%;
+  height: inherit;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  font-size: 80px;
+  padding: 0;
+  margin: 60px auto 0 auto;
+}
+.score {
+  margin: 0 auto;
+  font-size: 150px;
+  font-weight: 700;
+  color: rgba(231, 36, 6, 0.867);
+}
+.current {
+  margin-bottom: 60px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgb(231, 59, 90);
+  padding: 40px 60px;
+  color: #f1f1f1;
+  font-size: 20px;
+}
+.current-score {
+  font-size: 50px;
+}
+/* BUTTON  */
+.btn {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 5px 20px;
+}
+/* .btn:link {
+}
+.btn:visited {
+} */
+.btn:hover {
+  background-color: black;
+  color: aliceblue;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+}
+.btn--new {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translate(-50%);
+}
+.dice {
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px;
+  position: absolute;
+  bottom: 350px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.btn--roll {
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translate(-50%);
+}
+.btn--hold {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.hidden {
+  display: none;
+}
+.player--winner {
+  background-color: #4d4a4a;
+}
+
+.player--winner .name {
+  color: rgb(251, 61, 61);
+}
+.player--winner::after {
+  position: absolute;
+  top: 10px;
+  display: inline;
+  margin-left: 10px;
+  content: "The Winner";
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(250, 226, 15);
+  width: 100%;
+}
